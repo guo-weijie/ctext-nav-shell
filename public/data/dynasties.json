@@ -1,0 +1,196 @@
+{
+   "dynasties" : [
+      {
+         "id" : 1,
+         "title" : "西周",
+         "yearfrom" : -1046,
+         "yearto" : -771
+      },
+      {
+         "id" : 27,
+         "title" : "周",
+         "yearfrom" : -1046,
+         "yearto" : -221
+      },
+      {
+         "id" : 2,
+         "title" : "東周",
+         "yearfrom" : -770,
+         "yearto" : -256
+      },
+      {
+         "id" : 3,
+         "title" : "春秋",
+         "yearfrom" : -772,
+         "yearto" : -476
+      },
+      {
+         "id" : 4,
+         "title" : "戰國",
+         "yearfrom" : -475,
+         "yearto" : -221
+      },
+      {
+         "id" : 5,
+         "title" : "秦",
+         "yearfrom" : -221,
+         "yearto" : -206
+      },
+      {
+         "id" : 6,
+         "title" : "西漢",
+         "yearfrom" : -206,
+         "yearto" : 9
+      },
+      {
+         "id" : 7,
+         "title" : "新",
+         "yearfrom" : 9,
+         "yearto" : 25
+      },
+      {
+         "id" : 8,
+         "title" : "東漢",
+         "yearfrom" : 25,
+         "yearto" : 220
+      },
+      {
+         "id" : 9,
+         "title" : "漢",
+         "yearfrom" : -206,
+         "yearto" : 220
+      },
+      {
+         "id" : 10,
+         "title" : "三國",
+         "yearfrom" : 220,
+         "yearto" : 265
+      },
+      {
+         "id" : 11,
+         "title" : "西晉",
+         "yearfrom" : 265,
+         "yearto" : 317
+      },
+      {
+         "id" : 12,
+         "title" : "東晉",
+         "yearfrom" : 317,
+         "yearto" : 420
+      },
+      {
+         "id" : 13,
+         "title" : "晉",
+         "yearfrom" : 265,
+         "yearto" : 420
+      },
+      {
+         "id" : 14,
+         "title" : "南北朝",
+         "yearfrom" : 420,
+         "yearto" : 581
+      },
+      {
+         "id" : 28,
+         "title" : "南齊",
+         "yearfrom" : 479,
+         "yearto" : 502
+      },
+      {
+         "id" : 29,
+         "title" : "梁",
+         "yearfrom" : 502,
+         "yearto" : 557
+      },
+      {
+         "id" : 30,
+         "title" : "北齊",
+         "yearfrom" : 550,
+         "yearto" : 577
+      },
+      {
+         "id" : 31,
+         "title" : "北周",
+         "yearfrom" : 557,
+         "yearto" : 581
+      },
+      {
+         "id" : 32,
+         "title" : "陳",
+         "yearfrom" : 557,
+         "yearto" : 589
+      },
+      {
+         "id" : 15,
+         "title" : "隋",
+         "yearfrom" : 581,
+         "yearto" : 618
+      },
+      {
+         "id" : 16,
+         "title" : "唐",
+         "yearfrom" : 618,
+         "yearto" : 907
+      },
+      {
+         "id" : 17,
+         "title" : "五代十國",
+         "yearfrom" : 907,
+         "yearto" : 960
+      },
+      {
+         "id" : 18,
+         "title" : "北宋",
+         "yearfrom" : 960,
+         "yearto" : 1127
+      },
+      {
+         "id" : 19,
+         "title" : "南宋",
+         "yearfrom" : 1127,
+         "yearto" : 1279
+      },
+      {
+         "id" : 20,
+         "title" : "宋",
+         "yearfrom" : 960,
+         "yearto" : 1279
+      },
+      {
+         "id" : 21,
+         "title" : "遼",
+         "yearfrom" : 916,
+         "yearto" : 1125
+      },
+      {
+         "id" : 22,
+         "title" : "金",
+         "yearfrom" : 1115,
+         "yearto" : 1234
+      },
+      {
+         "id" : 23,
+         "title" : "元",
+         "yearfrom" : 1271,
+         "yearto" : 1368
+      },
+      {
+         "id" : 24,
+         "title" : "明",
+         "yearfrom" : 1368,
+         "yearto" : 1644
+      },
+      {
+         "id" : 25,
+         "title" : "清",
+         "yearfrom" : 1644,
+         "yearto" : 1911
+      },
+      {
+         "id" : 26,
+         "title" : "民國",
+         "yearfrom" : 1911,
+         "yearto" : 1949
+      }
+   ]
+}

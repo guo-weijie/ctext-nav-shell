@@ -1,0 +1,8 @@
+/* 隐藏滚动条但保留滚动能力（跨浏览器） */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE / 旧 Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome / Safari / 新版 Edge */
+}

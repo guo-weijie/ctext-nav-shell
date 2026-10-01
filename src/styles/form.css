@@ -1,0 +1,15 @@
+/* 原生表单控件配色跟随主题。
+   修复深色模式下 <select> 下拉列表「浅色底 + 浅色字」导致的低对比度问题。
+   color-scheme 会让浏览器用对应明暗方案渲染原生控件（下拉列表、滚动条、滑块等）。 */
+select {
+  color-scheme: light;
+}
+.dark select {
+  color-scheme: dark;
+}
+
+/* 兜底：部分浏览器/平台对 option 的 color-scheme 支持不完整，显式给出深色配色 */
+.dark select option {
+  background-color: #2a2723;
+  color: #e8e2d4;
+}
