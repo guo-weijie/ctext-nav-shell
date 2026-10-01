@@ -12,48 +12,12 @@ export interface ClassifiedBook extends CtextBook {
   siku: string | null // 四部分类键，如 "经部·易类"
 }
 
-export interface DynastyRef {
-  id: number
-  name: string
-}
-
-export interface TextInfo {
-  title: string
-  toptitle?: string
-  topurn?: string
-  workurn?: string
-  dynasty?: { from: DynastyRef; to: DynastyRef }
-  edition?: { collectionid: number; title: string; url: string }
-  lastmodified?: string
-  tags?: string[]
-}
-
-export interface SearchResult {
-  books: CtextBook[]
-}
-
-export interface Dynasty {
-  id: number
-  title: string
-  yearfrom: number
-  yearto: number
-}
-
-export interface DictionaryHeadword {
-  entrytype: 'name' | 'word' | 'place' | string
-  headword: string
-  id: number
-}
-
 // 本地落盘的静态数据文件结构（public/data/catalog.json）
 // 由 书籍分类结果_统一版_5.json 转换：书目标 dynasty/siku 归属，维度键顺序保留源文件序
 export interface CatalogFile {
   books: ClassifiedBook[]
   dynastyOrder: string[]
   sikuOrder: string[]
-}
-export interface DynastiesFile {
-  dynasties: Dynasty[]
 }
 
 // 主题模式 / 界面语言

@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
-import type { ClassifiedBook, CatalogFile, DynastiesFile, Dynasty } from '@/types/ctext'
+import type { ClassifiedBook, CatalogFile } from '@/types/ctext'
 
 const base = import.meta.env.BASE_URL
 
@@ -27,7 +27,6 @@ export const useCatalogStore = defineStore('catalog', () => {
   const books = ref<ClassifiedBook[]>([])
   const dynastyOrder = ref<string[]>([])
   const sikuOrder = ref<string[]>([])
-  const dynasties = ref<Dynasty[]>([])
   const loading = ref(false)
   const error = ref<string | null>(null)
 
@@ -46,18 +45,6 @@ export const useCatalogStore = defineStore('catalog', () => {
       error.value = (e as Error).message
     } finally {
       loading.value = false
-    }
-  }
-
-  // 朝代元数据来自本地 public/data/dynasties.json（仅作参考，当前导航以静态分类为准）
-  async function loadDynasties(): Promise<void> {
-    try {
-      const res = await fetch(`${base}data/dynasties.json`)
-      if (!res.ok) throw new Error(`dynasties ${res.status}`)
-      const data: DynastiesFile = await res.json()
-      dynasties.value = data.dynasties ?? []
-    } catch {
-      dynasties.value = []
     }
   }
 
@@ -134,7 +121,6 @@ export const useCatalogStore = defineStore('catalog', () => {
     books,
     dynastyOrder,
     sikuOrder,
-    dynasties,
     dynastyCategories,
     sikuCategories,
     sikuTree,
@@ -144,6 +130,5 @@ export const useCatalogStore = defineStore('catalog', () => {
     loading,
     error,
     loadCatalog,
-    loadDynasties,
   }
 })

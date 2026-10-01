@@ -11,10 +11,9 @@ import AttributionFooter from './AttributionFooter.vue'
 const catalog = useCatalogStore()
 const { t } = useI18n()
 
-// 目录/朝代静态数据仅加载一次（壳级），所有视图共享
+// 目录静态数据仅加载一次（壳级），所有视图共享
 onMounted(() => {
   catalog.loadCatalog()
-  catalog.loadDynasties()
 })
 </script>
 
