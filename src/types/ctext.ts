@@ -12,12 +12,14 @@ export interface ClassifiedBook extends CtextBook {
   siku: string | null // 四部分类键，如 "经部·易类"
 }
 
-// 本地落盘的静态数据文件结构（public/data/catalog.json）
-// 由 书籍分类结果_统一版_5.json 转换：书目标 dynasty/siku 归属，维度键顺序保留源文件序
-export interface CatalogFile {
-  books: ClassifiedBook[]
+// 初始化即加载的「目录元数据」（public/data/catalog.json，体积极小）
+// 仅含分类顺序与计数，不含 4.9 万本书——树渲染无需等待全量书目
+export interface CatalogMeta {
   dynastyOrder: string[]
   sikuOrder: string[]
+  dynastyCounts: Record<string, number>
+  sikuCounts: Record<string, number>
+  uncategorized: number
 }
 
 // 主题模式 / 界面语言

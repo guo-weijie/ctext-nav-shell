@@ -11,6 +11,7 @@ const { t } = useI18n()
 
 const urn = computed(() => decodeURIComponent((route.params.urn as string) || ''))
 const url = computed(() => urnToUrl(urn.value))
+catalog.loadBooks()
 const title = computed(() => catalog.findByUrn(urn.value)?.title ?? urn.value)
 </script>
 

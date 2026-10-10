@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useCatalogStore } from '@/stores/catalog'
 import { useSearchStore } from '@/stores/search'
 import { useI18n } from 'vue-i18n'
@@ -40,6 +40,15 @@ const showList = computed(() => hasSelection.value || hasQuery.value)
 const visible = computed(() => (hasQuery.value ? search.filtered : scoped.value ?? []))
 
 const hasSelection = computed(() => selection.value.dimension !== 'none')
+
+// 全量书目（4.2MB）仅在需要展示书单时才加载一次：选中分类节点或输入搜索词时触发
+watch(
+  showList,
+  (on) => {
+    if (on) catalog.loadBooks()
+  },
+  { immediate: true },
+)
 
 const scopeLabel = computed(() => {
   if (hasQuery.value) return t('search.title')
@@ -127,7 +136,13 @@ const scopeLabel = computed(() => {
         <p class="text-xs opacity-50 max-w-2xl">{{ t('intro.note') }}</p>
       </div>
 
-      <!-- 已选择节点：书籍网格 -->
+      <!-- 已选择节点：书籍网格（书单数据按需加载时显示加载态） -->
+      <p
+        v-if="catalog.loadingBooks"
+        class="flex-1 min-h-0 flex items-center justify-center text-sm opacity-60"
+      >
+        {{ t('common.loading') }}
+      </p>
       <VirtualBookList v-else :books="visible" class="flex-1 min-h-0" />
     </div>
   </section>
