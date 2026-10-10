@@ -54,4 +54,20 @@ export default {
     error: '加载失败',
     retry: '重试',
   },
+  seo: {
+    siteName: '古籍导航 · ctext.org',
+    home: {
+      title: '古籍导航',
+      description:
+        '古籍导航是「中国哲学书电子化计划（ctext.org）」的浏览前端，收录四万余种古籍，可按朝代与经史子集四部分类检索，一键跳转原站阅读正文。',
+    },
+    search: {
+      title: '搜索古籍',
+      description: '在四万余种古籍书目中搜索书名，支持简繁体自动互通，结果即时呈现。',
+    },
+    book: {
+      title: '书籍详情',
+      description: '查看古籍书目信息，并一键跳转至 ctext.org 原站阅读正文。',
+    },
+  },
 }

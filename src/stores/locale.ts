@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import type { Locale } from '@/types/ctext'
 import i18n from '@/i18n'
+import { setHtmlLang } from '@/utils/seo'
 
 const KEY = 'ctext:locale'
 
@@ -26,11 +27,13 @@ export const useLocaleStore = defineStore('locale', () => {
     locale.value = l
     i18n.global.locale.value = l
     localStorage.setItem(KEY, l)
+    setHtmlLang(l)
     // 目录/朝代均为本地静态文件且语言无关（书名恒为中文），切换界面语言无需重载数据
   }
 
   function init(): void {
     i18n.global.locale.value = locale.value
+    setHtmlLang(locale.value)
   }
 
   return { locale, setLocale, init }

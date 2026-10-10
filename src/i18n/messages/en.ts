@@ -54,4 +54,21 @@ export default {
     error: 'Failed to load',
     retry: 'Retry',
   },
+  seo: {
+    siteName: 'Classics Navigator · ctext.org',
+    home: {
+      title: 'Classics Navigator',
+      description:
+        'A browsing front-end for the Chinese Text Project (ctext.org). It indexes over 40,000 classical texts, browsable by dynasty and the Four Categories (经史子集), with one-click links to read the full text on the original site.',
+    },
+    search: {
+      title: 'Search Classics',
+      description:
+        'Search book titles across over 40,000 classical texts. Simplified/Traditional Chinese matching is automatic.',
+    },
+    book: {
+      title: 'Book Details',
+      description: 'View a classical text entry and open the full text on ctext.org with one click.',
+    },
+  },
 }

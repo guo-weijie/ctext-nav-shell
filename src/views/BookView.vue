@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { urnToUrl } from '@/utils/url'
 import { useCatalogStore } from '@/stores/catalog'
 import { useI18n } from 'vue-i18n'
+import { setPageTitle } from '@/utils/seo'
 
 const route = useRoute()
 const catalog = useCatalogStore()
@@ -13,6 +14,9 @@ const urn = computed(() => decodeURIComponent((route.params.urn as string) || ''
 const url = computed(() => urnToUrl(urn.value))
 catalog.loadBooks()
 const title = computed(() => catalog.findByUrn(urn.value)?.title ?? urn.value)
+
+// 书名加载完成后用真实书名覆盖 SEO 标题（数据异步，故用 watch）
+watch(title, (v) => setPageTitle(v), { immediate: true })
 </script>
 
 <template>

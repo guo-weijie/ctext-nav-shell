@@ -54,4 +54,20 @@ export default {
     error: '載入失敗',
     retry: '重試',
   },
+  seo: {
+    siteName: '古籍導航 · ctext.org',
+    home: {
+      title: '古籍導航',
+      description:
+        '古籍導航是「中國哲學書電子化計劃（ctext.org）」的瀏覽前端，收錄四萬餘種古籍，可按朝代與經史子集四部分類檢索，一鍵跳轉原站閱讀正文。',
+    },
+    search: {
+      title: '搜尋古籍',
+      description: '在四萬餘種古籍書目中搜尋書名，支援簡繁體自動互通，結果即時呈現。',
+    },
+    book: {
+      title: '書籍詳情',
+      description: '查看古籍書目資訊，並一鍵跳轉至 ctext.org 原站閱讀正文。',
+    },
+  },
 }
